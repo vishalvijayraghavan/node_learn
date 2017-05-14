@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>My Todo App</title>
+  <style>
+      #element1 {display:inline-block;margin-right:10px;}
+      #element2 {display:inline-block;}
+    </style>
+</head>
+
+<body>
+<h1><%= title %></h1>
+<ul>
+<% for(var i=0;i<items.length;i++){ %>
+  <li><%= items[i].task %></li>
+<% } %>
+</ul>
+
+  <form id="element1" action="/add" method="POST">
+    <input type="text" name="textfield">
+    <input type="submit" value="add">
+  </form>
+
+  <form id="element2" action="/delete" method="POST">
+    <input type="submit" value="delete">
+  </form>
+
+
+</body>
+</html>
